@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { RenutreLogo } from "@/components/renutre-logo"
+import { WHATSAPP_URL } from "@/lib/site"
 
 const navLinks = [
   { label: "Mi enfoque", href: "#enfoque" },
@@ -17,8 +18,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+    <header className="sticky top-0 z-50 w-full px-3 pt-3">
+      <div className="glass mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full px-3 pl-6">
         <Link href="#inicio" aria-label="renutre — inicio">
           <RenutreLogo />
         </Link>
@@ -28,7 +29,7 @@ export function SiteHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="text-sm font-semibold text-foreground/75 transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -38,9 +39,11 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Button
             asChild
-            className="rounded-full bg-primary px-5 text-primary-foreground hover:bg-primary/90"
+            className="rounded-full bg-primary px-5 text-primary-foreground shadow-sm transition-transform hover:scale-[1.03] hover:bg-primary/90"
           >
-            <Link href="#consulta">Consulta Online</Link>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              Consulta Online
+            </a>
           </Button>
         </div>
 
@@ -56,14 +59,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background/95 px-5 py-4 md:hidden">
+        <div className="glass mx-auto mt-2 max-w-6xl rounded-3xl px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary"
+                className="rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground/80 transition-colors hover:bg-card/70 hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -72,9 +75,14 @@ export function SiteHeader() {
               asChild
               className="mt-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              <Link href="#consulta" onClick={() => setOpen(false)}>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+              >
                 Consulta Online
-              </Link>
+              </a>
             </Button>
           </nav>
         </div>
