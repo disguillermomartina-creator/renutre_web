@@ -1,62 +1,30 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
-import { Fraunces, Mulish } from 'next/font/google'
-import './globals.css'
+import { Analytics } from "@vercel/analytics/next"
+import type { Metadata, Viewport } from "next"
+import { DM_Sans, Newsreader } from "next/font/google"
+import "./globals.css"
 
-const fraunces = Fraunces({
-  variable: '--font-fraunces',
-  subsets: ['latin'],
-  display: 'swap',
-})
-const mulish = Mulish({
-  variable: '--font-mulish',
-  subsets: ['latin'],
-  display: 'swap',
-})
+const newsreader = Newsreader({ variable: "--font-newsreader", subsets: ["latin"], display: "swap" })
+const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: 'renutre® — La recuperación es posible',
-  description:
-    'Un espacio para padres y adolescentes que atraviesan un Trastorno de la Conducta Alimentaria (TCA). Un punto de encuentro entre la ciencia, la empatía y el deseo de vivir mejor.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  metadataBase: new URL("https://www.renutre.com"),
+  title: "Renutre® | Acompañamiento en TCA para adolescentes y familias",
+  description: "Acompañamiento nutricional profesional, cercano y sin juicios para adolescentes, jóvenes y familias. Atención online y presencial en Córdoba Capital.",
+  openGraph: {
+    title: "Renutre® — Volver a sentir libertad",
+    description: "Acompañamiento en TCA y dificultades en la relación con la comida, el cuerpo y el control.",
+    type: "website",
+    locale: "es_AR",
   },
+  icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
 }
 
-export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#f7f1e6',
-}
+export const viewport: Viewport = { colorScheme: "light", themeColor: "#F8FAF7" }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="es"
-      className={`${fraunces.variable} ${mulish.variable} bg-background`}
-    >
-      <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+    <html lang="es" className={`${newsreader.variable} ${dmSans.variable}`}>
+      <body>{children}{process.env.NODE_ENV === "production" && <Analytics />}</body>
     </html>
   )
 }
