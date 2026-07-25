@@ -24,7 +24,7 @@ export function CarlaSection() {
               <Image
                 src="/images/renutre/carla-interior.jpg"
                 fill
-                alt="Carla Gerónimo, licenciada en Nutrición y fundadora de Renutre"
+                alt="Carla Gerónimo, licenciada en Nutrición"
                 className="object-cover object-top"
                 sizes="(min-width:1024px) 48vw,100vw"
               />
@@ -35,7 +35,7 @@ export function CarlaSection() {
             <p className="eyebrow mb-5">Sobre Carla</p>
 
             <h2 className="display-title text-5xl md:text-7xl">
-              Hola, soy Carla Gerónimo.
+              Hola, soy Carla Gerónimo
             </h2>
 
             <p className="mt-5 text-lg font-semibold text-primary">
@@ -44,7 +44,7 @@ export function CarlaSection() {
 
             <div className="body-copy mt-7 space-y-4">
               <p>
-                Soy la fundadora de Renutre®, un espacio de acompañamiento para
+                Soy la fundadora de renutre®, un espacio de acompañamiento para
                 adolescentes, jóvenes y familias que atraviesan dificultades en
                 su relación con la comida, el cuerpo o un Trastorno de la
                 Conducta Alimentaria.
@@ -69,29 +69,7 @@ export function CarlaSection() {
         </div>
 
         <div className="mt-20 grid items-start gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
-          <div>
-            <p className="eyebrow mb-4">Trayectoria profesional</p>
-
-            <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
-              Experiencia clínica, hospitalaria y docente.
-            </h3>
-
-            <div className="body-copy mt-6 space-y-3 leading-7">
-              <p>
-                Mi experiencia en instituciones de salud y espacios de formación
-                fortaleció una forma de trabajo basada en la escucha, el criterio
-                clínico y la articulación con otros profesionales.
-              </p>
-
-              <ul className="space-y-2">
-                {clinicalItems.map((item) => (
-                  <li key={item} className="border-t border-[#18355F]/15 pt-3">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+         
             <p className="eyebrow mb-4 mt-9">Formación especializada</p>
 
             <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
@@ -133,10 +111,6 @@ export function CarlaSection() {
               </p>
 
               <div className="mt-7 h-px w-28 bg-[#18355F]/35" />
-
-              <h4 className="mt-9 font-serif text-5xl text-[#18355F] md:text-6xl">
-                Carla
-              </h4>
             </div>
           </div>
         </div>
