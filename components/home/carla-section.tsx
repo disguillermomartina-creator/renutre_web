@@ -97,14 +97,6 @@ export function CarlaSection() {
                 sizes="(min-width:1024px) 48vw,100vw"
               />
             </div>
-
-            <div className="mt-10 max-w-xl">
-              <p className="font-serif text-3xl leading-tight text-[#18355F] md:text-4xl">
-                No se trata de cumplir una regla perfecta. Se trata de recuperar
-                confianza, presencia y libertad.
-              </p>
-
-              <div className="mt-7 h-px w-28 bg-[#18355F]/35" />
             </div>
           </div>
         </div>
