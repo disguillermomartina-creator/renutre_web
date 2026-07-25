@@ -97,7 +97,6 @@ export function CarlaSection() {
                 sizes="(min-width:1024px) 48vw,100vw"
               />
             </div>
-            </div>
           </div>
         </div>
       </div>
