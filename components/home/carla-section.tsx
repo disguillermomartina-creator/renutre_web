@@ -1,12 +1,5 @@
 import Image from "next/image"
 
-const clinicalItems = [
-  "Hospital Tránsito Cáceres de Allende: experiencia en internado y consultorio externo.",
-  "Sanatorio Morra: experiencia en internado y servicio de Neurorehabilitación.",
-  "Hospital Córdoba: experiencia en servicios de alimentación y nutrición hospitalaria.",
-  "Instituto Badra: docente del Curso de Asistentes de Nutrición y Alimentación.",
-]
-
 const trainingItems = [
   "Tándem Psicoterapia: especialización en tratamiento multidisciplinario de los Trastornos de la Conducta Alimentaria.",
   "La Casita: formación en abordaje de TCA en jóvenes y adolescentes, detección temprana, prevención y trabajo interdisciplinario.",
@@ -35,16 +28,17 @@ export function CarlaSection() {
             <p className="eyebrow mb-5">Sobre Carla</p>
 
             <h2 className="display-title text-5xl md:text-7xl">
-              Hola, soy Carla Gerónimo
+              Hola, soy Carla Gerónimo.
             </h2>
 
             <p className="mt-5 text-lg font-semibold text-primary">
-              Licenciada en Nutrición — Universidad Nacional de Córdoba · M.P. 3396
+              Licenciada en Nutrición — Universidad Nacional de Córdoba · M.P.
+              3396
             </p>
 
             <div className="body-copy mt-7 space-y-4">
               <p>
-                Soy la fundadora de renutre®, un espacio de acompañamiento para
+                Soy la fundadora de Renutre®, un espacio de acompañamiento para
                 adolescentes, jóvenes y familias que atraviesan dificultades en
                 su relación con la comida, el cuerpo o un Trastorno de la
                 Conducta Alimentaria.
@@ -69,8 +63,8 @@ export function CarlaSection() {
         </div>
 
         <div className="mt-20 grid items-start gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
-         
-            <p className="eyebrow mb-4 mt-9">Formación especializada</p>
+          <div>
+            <p className="eyebrow mb-4">Formación especializada</p>
 
             <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
               Conducta alimentaria, TCA y psiconutrición.
