@@ -1,102 +1,146 @@
 import Image from "next/image"
-import { Check } from "lucide-react"
 
-const highlights = [
-  "Experiencia clínica en Hospital Tránsito Cáceres, en internado y consultorio externo",
-  "Experiencia en Sanatorio Morra, en internado y servicio de Neurorehabilitación",
-  "Experiencia en Hospital Córdoba y en servicios de alimentación hospitalaria",
-  "Especialización en el tratamiento multidisciplinario de los TCA — Tándem Psicoterapia",
-  "Formación en abordaje de los TCA en jóvenes y adolescentes — La Casita",
-  "Entrenamiento en psiconutrición y conducta alimentaria — Sensus",
-  "Docente del Curso de Asistentes de Nutrición y Alimentación — Instituto Badra",
-  "Instructora en Educación Emocional — AELEM",
+const clinicalItems = [
+  "Hospital Tránsito Cáceres de Allende: experiencia en internado y consultorio externo.",
+  "Sanatorio Morra: experiencia en internado y servicio de Neurorehabilitación.",
+  "Hospital Córdoba: experiencia en servicios de alimentación y nutrición hospitalaria.",
+  "Instituto Badra: docente del Curso de Asistentes de Nutrición y Alimentación.",
+]
+
+const trainingItems = [
+  "Tándem Psicoterapia: especialización en tratamiento multidisciplinario de los Trastornos de la Conducta Alimentaria.",
+  "La Casita: formación en abordaje de TCA en jóvenes y adolescentes, detección temprana, prevención y trabajo interdisciplinario.",
+  "Sensus: entrenamiento en psiconutrición y conducta alimentaria, con foco en una relación más flexible, consciente y respetuosa con la comida y el cuerpo.",
+  "AELEM: instructora en Educación Emocional.",
 ]
 
 export function CarlaSection() {
   return (
     <section id="carla" className="section-pad bg-sand">
-      <div className="container-renutre grid items-center gap-12 lg:grid-cols-[.92fr_1.08fr] lg:gap-20">
-        <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white soft-shadow">
-            <Image
-              src="/images/renutre/fundadora.png"
-              fill
-              alt="Carla Gerónimo, licenciada en Nutrición y fundadora de Renutre"
-              className="object-cover object-top"
-              sizes="(min-width:1024px) 44vw,100vw"
-            />
+      <div className="container-renutre">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+          <div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white soft-shadow">
+              <Image
+                src="/images/renutre/fundadora.png"
+                fill
+                alt="Carla Gerónimo, licenciada en Nutrición y fundadora de Renutre"
+                className="object-cover object-top"
+                sizes="(min-width:1024px) 48vw,100vw"
+              />
+            </div>
           </div>
 
-          <div className="absolute -bottom-8 -right-5 hidden h-52 w-40 rotate-3 overflow-hidden rounded-3xl border-8 border-sand soft-shadow md:block">
-            <Image
-              src="/images/renutre/carla-bosque.jpg"
-              fill
-              alt="Carla Gerónimo en un entorno natural"
-              className="object-cover"
-            />
+          <div className="flex flex-col justify-center">
+            <p className="eyebrow mb-5">Sobre Carla</p>
+
+            <h2 className="display-title text-5xl md:text-7xl">
+              Hola, soy Carla Gerónimo.
+            </h2>
+
+            <p className="mt-5 text-lg font-semibold text-primary">
+              Licenciada en Nutrición — Universidad Nacional de Córdoba · M.P. 3396
+            </p>
+
+            <div className="body-copy mt-7 space-y-5">
+              <p>
+                Soy la fundadora de Renutre®, un espacio de acompañamiento para
+                adolescentes, jóvenes y familias que atraviesan dificultades en
+                su relación con la comida, el cuerpo o un Trastorno de la
+                Conducta Alimentaria.
+              </p>
+
+              <p>
+                Mi recorrido profesional comenzó en ámbitos clínicos y
+                hospitalarios. Con el tiempo orienté gran parte de mi práctica y
+                formación al abordaje de los TCA, la imagen corporal, la
+                conducta alimentaria y la psiconutrición.
+              </p>
+
+              <p>
+                Trabajo desde una mirada cercana e integral, entendiendo que la
+                alimentación nunca ocurre de manera aislada: está atravesada por
+                emociones, vínculos, historia personal y contexto familiar.
+              </p>
+            </div>
+
+            <div className="mt-8 h-px w-28 bg-[#18355F]/35" />
           </div>
         </div>
 
-        <div>
-          <p className="eyebrow mb-5">Sobre Carla</p>
+        <div className="mt-20 grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
+          <div className="order-2 lg:order-1">
+            <p className="eyebrow mb-5">Trayectoria profesional</p>
 
-          <h2 className="display-title text-5xl md:text-7xl">
-            Soy Carla Gerónimo, fundadora de Renutre®.
-          </h2>
+            <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
+              Experiencia clínica, hospitalaria y docente.
+            </h3>
 
-          <p className="mt-5 text-lg font-semibold text-primary">
-            Licenciada en Nutrición — Universidad Nacional de Córdoba · M.P. 3396
-          </p>
+            <div className="body-copy mt-7 space-y-5">
+              <p>
+                Mi experiencia en instituciones de salud y espacios de formación
+                fortaleció una forma de trabajo basada en la escucha, el criterio
+                clínico y la articulación con otros profesionales.
+              </p>
 
-          <div className="body-copy mt-6 space-y-4">
-            <p>
-              Acompaño a adolescentes, jóvenes y familias que atraviesan
-              dificultades en su relación con la comida, el cuerpo o un
-              Trastorno de la Conducta Alimentaria.
-            </p>
+              <ul className="space-y-4">
+                {clinicalItems.map((item) => (
+                  <li key={item} className="border-t border-[#18355F]/15 pt-4">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <p>
-              Mi recorrido combina experiencia clínica y hospitalaria, docencia
-              y formación específica en TCA, conducta alimentaria y
-              psiconutrición. Trabajo desde una mirada cercana e integral,
-              entendiendo que la alimentación nunca ocurre de manera aislada:
-              está atravesada por emociones, vínculos, experiencias y por la
-              historia de cada persona.
-            </p>
+            <p className="eyebrow mb-5 mt-12">Formación especializada</p>
+
+            <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
+              Conducta alimentaria, TCA y psiconutrición.
+            </h3>
+
+            <div className="body-copy mt-7 space-y-5">
+              <p>
+                Durante los últimos años profundicé mi formación junto a equipos
+                e instituciones especializadas en salud mental, conducta
+                alimentaria y abordajes interdisciplinarios.
+              </p>
+
+              <ul className="space-y-4">
+                {trainingItems.map((item) => (
+                  <li key={item} className="border-t border-[#18355F]/15 pt-4">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <h4 className="mt-14 font-serif text-5xl text-[#18355F] md:text-6xl">
+              Carla
+            </h4>
           </div>
 
-          <p className="eyebrow mb-4 mt-8">
-            Trayectoria y formación especializada
-          </p>
+          <div className="order-1 lg:order-2">
+            <div className="relative lg:-mt-12">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-white soft-shadow">
+                <Image
+                  src="/images/renutre/carla-bosque.jpg"
+                  fill
+                  alt="Carla Gerónimo en un entorno natural"
+                  className="object-cover"
+                  sizes="(min-width:1024px) 48vw,100vw"
+                />
+              </div>
+            </div>
 
-          <ul className="grid gap-3">
-            {highlights.map((highlight) => (
-              <li
-                key={highlight}
-                className="flex gap-3 text-sm leading-relaxed"
-              >
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-life text-white">
-                  <Check size={13} />
-                </span>
+            <div className="mx-auto mt-10 max-w-xl text-center">
+              <p className="font-serif text-3xl leading-tight text-[#18355F] md:text-4xl">
+                No se trata de cumplir una regla perfecta. Se trata de recuperar
+                confianza, presencia y libertad.
+              </p>
 
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="body-copy mt-7">
-            Esta formación continua me permite acompañar cada proceso con
-            sensibilidad y criterio profesional, articulando con otros
-            profesionales cuando la situación lo necesita y respetando los
-            tiempos y particularidades de cada persona y su familia.
-          </p>
-
-          <a
-            href="#contacto"
-            className="mt-8 inline-flex rounded-full border border-primary px-6 py-3 text-sm font-bold text-primary transition-colors hover:bg-white"
-          >
-            Hablar con Carla
-          </a>
+              <div className="mx-auto mt-7 h-px w-28 bg-[#18355F]/35" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
