@@ -1,4 +1,3 @@
-:::writing{variant="standard" id="91843"}
 import Image from "next/image"
 import { Check } from "lucide-react"
 
@@ -103,4 +102,3 @@ export function CarlaSection() {
     </section>
   )
 }
-:::
