@@ -24,7 +24,7 @@ export function CarlaSection() {
               <Image
                 src="/images/renutre/carla-interior.jpg"
                 fill
-                alt="Carla Gerónimo, licenciada en Nutrición"
+                alt="Carla Gerónimo, licenciada en Nutrición y fundadora de Renutre"
                 className="object-cover object-top"
                 sizes="(min-width:1024px) 48vw,100vw"
               />
@@ -44,7 +44,7 @@ export function CarlaSection() {
 
             <div className="body-copy mt-7 space-y-4">
               <p>
-                Soy la fundadora de renutre®, un espacio de acompañamiento para
+                Soy la fundadora de Renutre®, un espacio de acompañamiento para
                 adolescentes, jóvenes y familias que atraviesan dificultades en
                 su relación con la comida, el cuerpo o un Trastorno de la
                 Conducta Alimentaria.
@@ -70,20 +70,20 @@ export function CarlaSection() {
 
         <div className="mt-20 grid items-start gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
           <div>
-            <p className="eyebrow mb-5">Trayectoria profesional</p>
+            <p className="eyebrow mb-4">Trayectoria profesional</p>
 
             <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
               Experiencia clínica, hospitalaria y docente.
             </h3>
 
-            <div className="body-copy mt-6 space-y-4 leading-7">
+            <div className="body-copy mt-6 space-y-3 leading-7">
               <p>
                 Mi experiencia en instituciones de salud y espacios de formación
                 fortaleció una forma de trabajo basada en la escucha, el criterio
                 clínico y la articulación con otros profesionales.
               </p>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {clinicalItems.map((item) => (
                   <li key={item} className="border-t border-[#18355F]/15 pt-3">
                     {item}
@@ -92,20 +92,20 @@ export function CarlaSection() {
               </ul>
             </div>
 
-            <p className="eyebrow mb-5 mt-10">Formación especializada</p>
+            <p className="eyebrow mb-4 mt-9">Formación especializada</p>
 
             <h3 className="font-serif text-4xl leading-tight text-[#18355F] md:text-5xl">
               Conducta alimentaria, TCA y psiconutrición.
             </h3>
 
-            <div className="body-copy mt-6 space-y-4 leading-7">
+            <div className="body-copy mt-6 space-y-3 leading-7">
               <p>
                 Durante los últimos años profundicé mi formación junto a equipos
                 e instituciones especializadas en salud mental, conducta
                 alimentaria y abordajes interdisciplinarios.
               </p>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {trainingItems.map((item) => (
                   <li key={item} className="border-t border-[#18355F]/15 pt-3">
                     {item}
@@ -113,17 +113,6 @@ export function CarlaSection() {
                 ))}
               </ul>
             </div>
-
-            <p className="mt-10 max-w-xl font-serif text-3xl leading-tight text-[#18355F] md:text-4xl">
-              No se trata de cumplir una regla perfecta. Se trata de recuperar
-              confianza, presencia y libertad.
-            </p>
-
-            <div className="mt-7 h-px w-28 bg-[#18355F]/35" />
-
-            <h4 className="mt-10 font-serif text-5xl text-[#18355F] md:text-6xl">
-              Carla
-            </h4>
           </div>
 
           <div>
@@ -135,6 +124,19 @@ export function CarlaSection() {
                 className="object-cover"
                 sizes="(min-width:1024px) 48vw,100vw"
               />
+            </div>
+
+            <div className="mt-10 max-w-xl">
+              <p className="font-serif text-3xl leading-tight text-[#18355F] md:text-4xl">
+                No se trata de cumplir una regla perfecta. Se trata de recuperar
+                confianza, presencia y libertad.
+              </p>
+
+              <div className="mt-7 h-px w-28 bg-[#18355F]/35" />
+
+              <h4 className="mt-9 font-serif text-5xl text-[#18355F] md:text-6xl">
+                Carla
+              </h4>
             </div>
           </div>
         </div>
